@@ -66,10 +66,10 @@ else(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wextra")
   endif(NOT CMAKE_CXX_FLAGS MATCHES "-Wextra")
 
-  # Use -Werror for clang and gcc.
-  if(NOT CMAKE_CXX_FLAGS MATCHES "-Werror")
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Werror")
-  endif(NOT CMAKE_CXX_FLAGS MATCHES "-Werror")
+  # # Use -Werror for clang and gcc.
+  # if(NOT CMAKE_CXX_FLAGS MATCHES "-Werror")
+  #   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Werror")
+  # endif(NOT CMAKE_CXX_FLAGS MATCHES "-Werror")
 
   # Disable C++ exceptions.
   string(REGEX REPLACE "-fexceptions" "" CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
@@ -94,8 +94,8 @@ option(SNAPPY_REQUIRE_AVX2 "Target processors with AVX2 support." OFF)
 
 option(SNAPPY_INSTALL "Install Snappy's header and library" ON)
 
-include(TestBigEndian)
-test_big_endian(SNAPPY_IS_BIG_ENDIAN)
+# include(TestBigEndian)
+# test_big_endian(SNAPPY_IS_BIG_ENDIAN)
 
 include(CheckIncludeFile)
 check_include_file("sys/mman.h" HAVE_SYS_MMAN_H)
