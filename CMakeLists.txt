@@ -103,8 +103,8 @@ option(SNAPPY_REQUIRE_AVX2 "Target processors with AVX2 support." OFF)
 
 option(SNAPPY_INSTALL "Install Snappy's header and library" ON)
 
-include(TestBigEndian)
-test_big_endian(SNAPPY_IS_BIG_ENDIAN)
+# include(TestBigEndian)
+# test_big_endian(SNAPPY_IS_BIG_ENDIAN)
 
 include(CheckIncludeFile)
 check_include_file("sys/mman.h" HAVE_SYS_MMAN_H)
