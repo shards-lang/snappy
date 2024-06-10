@@ -27,6 +27,7 @@
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 cmake_minimum_required(VERSION 3.10)
+cmake_policy(SET CMP0091 NEW)
 project(Snappy VERSION 1.2.2 LANGUAGES C CXX)
 
 # C++ standard can be overridden when this is used as a sub-project.
