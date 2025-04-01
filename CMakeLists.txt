@@ -71,14 +71,6 @@ else(MSVC)
   if(NOT CMAKE_CXX_FLAGS MATCHES "-Wno-sign-compare")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-sign-compare")
   endif(NOT CMAKE_CXX_FLAGS MATCHES "-Wno-sign-compare")
-
-  # Disable C++ exceptions.
-  string(REGEX REPLACE "-fexceptions" "" CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-exceptions")
-
-  # Disable RTTI.
-  string(REGEX REPLACE "-frtti" "" CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-rtti")
 endif(MSVC)
 
 # BUILD_SHARED_LIBS is a standard CMake variable, but we declare it here to make
